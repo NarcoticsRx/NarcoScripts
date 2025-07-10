@@ -1,0 +1,8 @@
+GameProject {
+ ID "NarcoScripts"
+ GUID "65D304C9A4C06193"
+ TITLE "NarcoScripts"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
