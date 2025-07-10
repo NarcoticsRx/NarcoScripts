@@ -220,7 +220,7 @@ class NarcoJsonSettingsManager
 		s_Settings.m_PersistentRankSettings.m_bLoadoutCleaning = true;
 		s_Settings.m_PersistentRankSettings.m_iWipeIntervalDays = 7;
 		s_Settings.m_PersistentRankSettings.m_fRankXPMultiplier = 5.0;
-		s_Settings.m_PersistentRankSettings.m_iLastWipeTimestampUTC = 0;
+		s_Settings.m_PersistentRankSettings.m_iLastWipeTimestampUTC = System.GetUnixTime();
 		
 		s_Settings.m_SquadXPSettings.m_bEnabled = true;
 		s_Settings.m_SquadXPSettings.m_iProximityDistance = 50;

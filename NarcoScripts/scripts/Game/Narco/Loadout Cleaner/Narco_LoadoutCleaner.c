@@ -198,7 +198,7 @@ class LoadoutCleaner
 			
 			if (pieces.Count() > 1)
 			{
-				Print(string.Format("Loadout Cleaner: Found and removed GUID '%1' in file %2", guid, filePath), LogLevel.NORMAL);
+				//Print(string.Format("Loadout Cleaner: Found and removed GUID '%1' in file %2", guid, filePath), LogLevel.NORMAL);
 				fileContent = SCR_StringHelper.Join(replacePatternCore, pieces);
 			}
 			
@@ -210,7 +210,7 @@ class LoadoutCleaner
 
 		if (fileContent != originalFileContent)
 		{
-			Print(string.Format("Loadout Cleaner: Modification found for %1. Saving file.", filePath), LogLevel.NORMAL);
+			//Print(string.Format("Loadout Cleaner: Modification found for %1. Saving file.", filePath), LogLevel.NORMAL);
 			
 			array<string> contentToWrite = { fileContent };
 			

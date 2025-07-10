@@ -107,7 +107,7 @@ class PersistentXPManager
 		if (!playerXPHandler) return;
 		
 		playerXPHandler.AddPlayerXP(SCR_EXPRewards.UNDEFINED, 1, false, data.m_iTotalXP);
-		Print(string.Format("Persistent XP Manager: Loaded %1 XP for player %2.", data.m_iTotalXP, GetGame().GetPlayerManager().GetPlayerName(playerId)), LogLevel.NORMAL);
+		//Print(string.Format("Persistent XP Manager: Loaded %1 XP for player %2.", data.m_iTotalXP, GetGame().GetPlayerManager().GetPlayerName(playerId)), LogLevel.NORMAL);
 	}
 
 	//------------------------------------------------------------------------------------------------

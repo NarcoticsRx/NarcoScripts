@@ -106,7 +106,7 @@ modded class SCR_XPHandlerComponent
 			// Award XP if the timer reaches the threshold.
             if (m_mPlayerProximityTimers.Get(playerID) >= m_fXpInterval_Config)
             {
-				Print(string.Format("Squad Incentive Mod: ...Player '%1' (ID: %2) reached XP threshold! Accrued Time: %3s / %4s", playerName, playerID, m_mPlayerProximityTimers.Get(playerID), m_fXpInterval_Config), LogLevel.NORMAL);
+				//Print(string.Format("Squad Incentive Mod: ...Player '%1' (ID: %2) reached XP threshold! Accrued Time: %3s / %4s", playerName, playerID, m_mPlayerProximityTimers.Get(playerID), m_fXpInterval_Config), LogLevel.NORMAL);
                 AwardAccruedXP(playerID, playerEntity, squad);
                 
                 float newTime = m_mPlayerProximityTimers.Get(playerID) - m_fXpInterval_Config;
@@ -137,7 +137,7 @@ modded class SCR_XPHandlerComponent
 
 		if (nearbyMembers == 0)
 		{
-			Print(string.Format("Squad Incentive Mod: ...Halting XP award for '%1', all squadmates moved out of range at the last moment.", playerName), LogLevel.WARNING);
+			//Print(string.Format("Squad Incentive Mod: ...Halting XP award for '%1', all squadmates moved out of range at the last moment.", playerName), LogLevel.WARNING);
 			return;
 		}
 
@@ -159,7 +159,7 @@ modded class SCR_XPHandlerComponent
 		baseXP = GetXPRewardAmount(rewardType);
 		if (baseXP <= 0)
 		{
-			Print(string.Format("Squad Incentive Mod: ...Base XP for reward type '%1' is 0. Cannot calculate bonus. Check config.", typename.EnumToString(SCR_EXPRewards, rewardType)), LogLevel.ERROR);
+			//Print(string.Format("Squad Incentive Mod: ...Base XP for reward type '%1' is 0. Cannot calculate bonus. Check config.", typename.EnumToString(SCR_EXPRewards, rewardType)), LogLevel.ERROR);
 			return;
 		}
 
@@ -177,9 +177,9 @@ modded class SCR_XPHandlerComponent
 			finalMultiplier = 1.0 + bonusMultiplier;
 		}
 
-		Print(string.Format("Squad Incentive Mod: ...Multiplier Calculation for '%1': BaseXP=%2, Nearby=%3, FinalMult=%4", playerName, baseXP, nearbyMembers, finalMultiplier), LogLevel.NORMAL);
+		//Print(string.Format("Squad Incentive Mod: ...Multiplier Calculation for '%1': BaseXP=%2, Nearby=%3, FinalMult=%4", playerName, baseXP, nearbyMembers, finalMultiplier), LogLevel.NORMAL);
         this.AwardXP(playerID, rewardType, finalMultiplier);
-		Print(string.Format("Squad Incentive Mod: ...>>> Awarding scaled XP to '%1'.", playerName), LogLevel.NORMAL);
+		//Print(string.Format("Squad Incentive Mod: ...>>> Awarding scaled XP to '%1'.", playerName), LogLevel.NORMAL);
     }
 	
 	//------------------------------------------------------------------------------------------------
